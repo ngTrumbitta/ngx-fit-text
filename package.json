@@ -1,6 +1,6 @@
 {
   "name": "ngx-fit-text",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Ngx Fit Text, an Angular implementation of @patrickmarabeas/ng-FitText.js",
   "main": "./bundles/ngx-fit-text.umd.js",
   "scripts": {
@@ -14,7 +14,10 @@
     "start": "webpack-dev-server --open --config ./webpack/webpack.dev.js",
     "tagVersion": "np --no-publish"
   },
-  "keywords": ["FitText", "Angular"],
+  "keywords": [
+    "FitText",
+    "Angular"
+  ],
   "author": "William Ghelfi <trumbitta@gmail.com>",
   "license": "ISC",
   "devDependencies": {
