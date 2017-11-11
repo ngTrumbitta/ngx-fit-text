@@ -1,6 +1,6 @@
 {
   "name": "ngx-fit-text",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ngx Fit Text, an Angular library",
   "main": "./bundles/ngx-fit-text.umd.js",
   "scripts": {
