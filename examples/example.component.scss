@@ -1,0 +1,15 @@
+article {
+  margin: 1rem 0;
+  padding: 1rem;
+  max-width: 350px;
+  background-color: #635380;
+
+  &.wider {
+    max-width: 600px;
+  }
+
+  &.widest {
+    max-width: 90%;
+    width: 90%;
+  }
+}
