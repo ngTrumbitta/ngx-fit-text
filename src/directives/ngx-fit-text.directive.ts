@@ -15,17 +15,17 @@ import {
   selector: '[ngxFitText]',
 })
 export class NgxFitTextDirective implements AfterViewInit {
-  @Input() pitFitText? = 1; // compressor
-  @Input() pitFitTextMin? = 0;
-  @Input() pitFitTextMax? = Number.POSITIVE_INFINITY;
-  @Input() pitFitDelay? = 100;
+  @Input() ngxFitText? = 1; // compressor
+  @Input() ngxFitTextMin?: number | 'inherit' = 0;
+  @Input() ngxFitTextMax?: number | 'inherit' = Number.POSITIVE_INFINITY;
+  @Input() ngxFitTextDelay? = 100;
 
   private parent: HTMLElement;
   private element: HTMLElement;
   private computed: CSSStyleDeclaration;
   private newlines: number;
-  private minFontSize: number | 'inherit';
-  private maxFontSize: number | 'inherit';
+  private minFontSize: number;
+  private maxFontSize: number;
   private lineHeight: string;
   private display: string;
   private calcSize = 10;
@@ -39,13 +39,13 @@ export class NgxFitTextDirective implements AfterViewInit {
     this.newlines =
       this.element.childElementCount > 0 ? this.element.childElementCount : 1;
     this.minFontSize =
-      this.pitFitTextMin.toString() === 'inherit'
+      this.ngxFitTextMin === 'inherit'
         ? this.computed['font-size']
-        : this.pitFitTextMin;
+        : this.ngxFitTextMin;
     this.maxFontSize =
-      this.pitFitTextMax.toString() === 'inherit'
+      this.ngxFitTextMax === 'inherit'
         ? this.computed['font-size']
-        : this.pitFitTextMax;
+        : this.ngxFitTextMax;
     this.lineHeight = this.computed['line-height'];
     this.display = this.computed['display'];
   }
@@ -60,7 +60,7 @@ export class NgxFitTextDirective implements AfterViewInit {
       (() => {
         this.resize();
       }).bind(this),
-      this.pitFitDelay
+      this.ngxFitTextDelay
     );
   }
 
@@ -85,7 +85,7 @@ export class NgxFitTextDirective implements AfterViewInit {
 
   private calculate() {
     const ratio =
-      this.calcSize * this.newlines / this.element.offsetWidth / this.newlines;
+      (this.calcSize * this.newlines) / this.element.offsetWidth / this.newlines;
 
     return Math.max(
       Math.min(
@@ -94,10 +94,10 @@ export class NgxFitTextDirective implements AfterViewInit {
             parseFloat(getComputedStyle(this.parent).paddingRight)) -
           6) *
           ratio *
-          this.pitFitText,
-        parseFloat(this.maxFontSize.toString())
+          this.ngxFitText,
+        this.maxFontSize
       ),
-      parseFloat(this.minFontSize.toString())
+      this.minFontSize
     );
   }
 
