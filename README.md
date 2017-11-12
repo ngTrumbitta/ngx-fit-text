@@ -9,7 +9,9 @@ From the original description (slightly edited for clarity):
 
 > Ngx-FitText makes font-sizes flexible. Use this Angular directive in your fluid or responsive layout to achieve scalable headlines that fill the width of a parent element.
 
-![](https://raw.githubusercontent.com/ngTrumbitta/ngx-fit-text/master/examples.gif)
+<p align="center">
+  <img src="examples.gif" alt="examples" width="100%" />
+</p>
 
 ## Prerequisites
 
