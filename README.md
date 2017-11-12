@@ -5,6 +5,11 @@
 
 <p align="center">An Angular implementation of @patrickmarabeas/ng-FitText.js</p>
 
+![Angular](https://img.shields.io/badge/Angular-5-red.svg)
+[![Build Status](https://travis-ci.org/ngTrumbitta/ngx-fit-text.svg?branch=master)](https://travis-ci.org/ngTrumbitta/ngx-fit-text)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+[![License](https://img.shields.io/badge/license-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+
 From the original description (slightly edited for clarity):
 
 > Ngx-FitText makes font-sizes flexible. Use this Angular directive in your fluid or responsive layout to achieve scalable headlines that fill the width of a parent element.
