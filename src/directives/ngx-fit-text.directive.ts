@@ -9,12 +9,13 @@ import {
   ElementRef,
   Input,
   HostListener,
+  OnInit,
 } from '@angular/core';
 
 @Directive({
   selector: '[ngxFitText]',
 })
-export class NgxFitTextDirective implements AfterViewInit {
+export class NgxFitTextDirective implements AfterViewInit, OnInit {
   @Input() ngxFitText? = 1; // compressor
   @Input() ngxFitTextMin?: number | 'inherit' = 0;
   @Input() ngxFitTextMax?: number | 'inherit' = Number.POSITIVE_INFINITY;
@@ -38,14 +39,6 @@ export class NgxFitTextDirective implements AfterViewInit {
     this.computed = window.getComputedStyle(this.element);
     this.newlines =
       this.element.childElementCount > 0 ? this.element.childElementCount : 1;
-    this.minFontSize =
-      this.ngxFitTextMin === 'inherit'
-        ? this.computed['font-size']
-        : this.ngxFitTextMin;
-    this.maxFontSize =
-      this.ngxFitTextMax === 'inherit'
-        ? this.computed['font-size']
-        : this.ngxFitTextMax;
     this.lineHeight = this.computed['line-height'];
     this.display = this.computed['display'];
   }
@@ -62,6 +55,18 @@ export class NgxFitTextDirective implements AfterViewInit {
       }).bind(this),
       this.ngxFitTextDelay
     );
+  }
+
+  ngOnInit() {
+    this.minFontSize =
+    this.ngxFitTextMin === 'inherit'
+      ? this.computed['font-size']
+      : this.ngxFitTextMin;
+
+    this.maxFontSize =
+    this.ngxFitTextMax === 'inherit'
+      ? this.computed['font-size']
+      : this.ngxFitTextMax;
   }
 
   ngAfterViewInit() {
