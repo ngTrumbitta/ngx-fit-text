@@ -1,9 +1,9 @@
-<h1 style="text-align: center">
+<h1 align="center">
   <img src="logo.svg" alt="Logo" width="200" /><br />
   Angular FitText
 </h1>
 
-<p style="text-align: center">An Angular implementation of @patrickmarabeas/ng-FitText.js</p>
+<p align="center">An Angular implementation of @patrickmarabeas/ng-FitText.js</p>
 
 From the original description (slightly edited for clarity):
 
