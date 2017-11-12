@@ -5,6 +5,7 @@
 
 <p align="center">An Angular implementation of @patrickmarabeas/ng-FitText.js</p>
 
+[![Download via NPM](https://img.shields.io/npm/v/ngx-fit-text.svg)](https://www.npmjs.com/package/ngx-fit-text)
 ![Angular](https://img.shields.io/badge/Angular-5-red.svg)
 [![Build Status](https://travis-ci.org/ngTrumbitta/ngx-fit-text.svg?branch=master)](https://travis-ci.org/ngTrumbitta/ngx-fit-text)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
