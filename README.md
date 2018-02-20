@@ -28,7 +28,7 @@ This directive has been tested with Angular 5 and Angular CLI. Let me know if yo
 Install into your Angular CLI project root folder.
 
 ```sh
-npm install ngx-fittext -S
+npm install ngx-fit-text -S
 ```
 
 ## Usage
